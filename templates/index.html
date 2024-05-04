@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Weather Conditions</title>
+    <title>Data available</title>
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
 </head>
 <body>
-    <h1>Get Weather Conditions</h1>
-    <form action="/weather">
-        <input type="text" name="city" id="city" placeholder="Enter a city " />
-        <button type="submit">Submit</button>
+    <h1>Labour Force Data</h1>
+    <form action="/labourForce">
+        <button type="submit">See Labour Force Data</button>
     </form>
+    <h1>Credit Aggregates Data</h1>
+    <form action="/creditAggregates">
+        <button type="submit">See Credit Aggregates Data</button>
+    </form>
+
     </body>
     </html>
