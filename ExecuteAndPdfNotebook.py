@@ -33,7 +33,7 @@ def runNotebook(theNotebookFile):
     html_body, _ = html_exporter.from_notebook_node(notebook)
 
     # Save the HTML
-    with open('labourForce.html', 'w') as f:
-        f.write(html_body)
+    #with open('labourForce.html', 'w') as f:
+    #    f.write(html_body)
 
     return html_body
