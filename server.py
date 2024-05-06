@@ -25,14 +25,12 @@ def get_creditAggs():
     #Almost certainly will have been run before
     if lastRunCreditAggs:
 
-        #print('Last run triggered')
-
         timeDelta = datetime.now() - lastRunCreditAggs
 
         secondsTimeDelta = timeDelta.days*24*60*60 + timeDelta.seconds
 
-        #Run again if was run more than 100 seconds ago
-        if secondsTimeDelta > 100:
+        #Run again if was run more than 10 seconds ago
+        if secondsTimeDelta > 10:
 
              a = runNotebook("CreditAggregatesExample.ipynb")
 
@@ -41,7 +39,7 @@ def get_creditAggs():
              with open('creditAggregates.html', 'w') as f:
                  f.write(a)
         else:
-            #Get last run from file
+            #Else get last run from file
             #print('Not running again, looking for existing html')
             with open('creditAggregates.html', 'r') as f:
                 a = f.read()
@@ -72,6 +70,27 @@ def get_labourForce():
     #                       status=weather_data["weather"][0]["description"].capitalize(),
     #                       temp=f"{weather_data['main']['temp']:.1f}",
     #                       feels_like=f"{weather_data['main']['feels_like']:.1f}")
+
+@app.route('/lendingIndicators')
+def get_lendingIndicators():
+    #city = request.args.get('city')
+    #weather_data = get_current_weather(city)
+    #a = runNotebook("LabourForceExample.ipynb")
+    a = runNotebook("ABS Lending Indicators Table 1.ipynb")
+
+    with open('lendingIndicators.html', 'w') as f:
+        f.write(a)
+
+    #return htmlOutput
+    return a
+    #                       title=weather_data["name"],
+    #                       status=weather_data["weather"][0]["description"].capitalize(),
+    #                       temp=f"{weather_data['main']['temp']:.1f}",
+    #                       feels_like=f"{weather_data['main']['feels_like']:.1f}")
+
+
+
+
 
 
 if __name__ == "__main__":
