@@ -89,6 +89,26 @@ def get_lendingIndicators():
     #                       feels_like=f"{weather_data['main']['feels_like']:.1f}")
 
 
+@app.route('/householdSpendingIndicator')
+def get_householdSpendingIndicator():
+    #city = request.args.get('city')
+    #weather_data = get_current_weather(city)
+    #a = runNotebook("LabourForceExample.ipynb")
+    a = runNotebook("HouseholdSpendingIndicator.ipynb")
+
+    with open('HouseholdSpendingIndicator.html', 'w') as f:
+        f.write(a)
+
+    #return htmlOutput
+    return a
+    #                       title=weather_data["name"],
+    #                       status=weather_data["weather"][0]["description"].capitalize(),
+    #                       temp=f"{weather_data['main']['temp']:.1f}",
+    #                       feels_like=f"{weather_data['main']['feels_like']:.1f}")
+
+
+
+
 
 
 
