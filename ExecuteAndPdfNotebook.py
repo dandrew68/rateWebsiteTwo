@@ -22,8 +22,8 @@ def runNotebook(theNotebookFile):
     exec_proc.preprocess(notebook, {'metadata': {'path': '.'}})
 
     # Execute the notebook again - DR edit
-    exec_proc = ExecutePreprocessor(timeout=600, kernel_name='python3')
-    exec_proc.preprocess(notebook, {'metadata': {'path': '.'}})
+    #exec_proc = ExecutePreprocessor(timeout=600, kernel_name='python3')
+    #exec_proc.preprocess(notebook, {'metadata': {'path': '.'}})
 
     # Exporter to exclude input cells
     html_exporter = HTMLExporter()
