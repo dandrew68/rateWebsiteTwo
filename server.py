@@ -13,7 +13,7 @@ lastRunCreditAggs = 0
 
 # Set the timezone to Australia
 import os, time
-os.environ['TZ'] = 'Australia/Sydney'
+os.environ['TZ'] = 'Australia/NSW'
 time.tzset()
 
 
