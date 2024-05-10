@@ -11,6 +11,11 @@ app = Flask(__name__)
 global lastRunCreditAggs
 lastRunCreditAggs = 0
 
+# Set the timezone to Australia
+import os, time
+os.environ['TZ'] = 'Australia/Sydney'
+time.tzset()
+
 
 @app.route('/')
 @app.route('/index')
