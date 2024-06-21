@@ -113,6 +113,22 @@ def get_householdSpendingIndicator():
 
 
 
+@app.route('/graphingExamples')
+def get_graphingExamples():
+    #city = request.args.get('city')
+    #weather_data = get_current_weather(city)
+    #a = runNotebook("LabourForceExample.ipynb")
+    a = runNotebook("Graphing Examples.ipynb")
+
+    with open('graphingExamples.html', 'w') as f:
+        f.write(a)
+
+    #return htmlOutput
+    return a
+    #                       title=weather_data["name"],
+    #                       status=weather_data["weather"][0]["description"].capitalize(),
+    #                       temp=f"{weather_data['main']['temp']:.1f}",
+    #                       feels_like=f"{weather_data['main']['feels_like']:.1f}")
 
 
 
