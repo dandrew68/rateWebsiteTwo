@@ -50,7 +50,7 @@ def get_creditAggs():
                 a = f.read()
             
     else:
-        a = runNotebook("CreditAggregatesNoTable.ipynb")
+        a = runNotebook("CreditAggregatesExample.ipynb")
         lastRunCreditAggs = datetime.now()
         with open('creditAggregates.html', 'w') as f:
                  f.write(a)
