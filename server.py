@@ -37,7 +37,7 @@ def get_creditAggs():
         #Run again if was run more than 10 seconds ago
         if secondsTimeDelta > 10:
 
-             a = runNotebook("CreditAggregatesNoTable.ipynb")
+             a = runNotebook("CreditAggregatesExample.ipynb")
 
              lastRunCreditAggs = datetime.now()
     
