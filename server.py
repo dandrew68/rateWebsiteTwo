@@ -99,7 +99,7 @@ def get_householdSpendingIndicator():
     #city = request.args.get('city')
     #weather_data = get_current_weather(city)
     #a = runNotebook("LabourForceExample.ipynb")
-    a = runNotebook("HouseholdSpendingIndicator.ipynb")
+    a = runNotebook("HouseholdSpendingIndicatorNew.ipynb")
 
     with open('HouseholdSpendingIndicator.html', 'w') as f:
         f.write(a)
