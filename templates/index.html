@@ -3,28 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data available</title>
-    <p>Click buttons below to see up-to-date graphs for each dataset</p>
+    <title>Aussie Macro Data</title>
+    <h1 style="text-align:center">Australian Macro and Financial Data</h1>
+    <br>
+    <br>
+    <h2>Click buttons below to see up-to-date graphs for each dataset</h2>
     <p>Graphs take around 10 seconds to update</p>
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
 </head>
+
+<br>
+<br>
+<br>
+<br>
+
 <body>
-    <h1>Labour Force Data (ABS)</h1>
+    <h2>Labour Force Data (ABS)</h2>
     <form action="/labourForce">
         <button type="submit">See Labour Force Data</button>
     </form>
-    <h1>Credit Aggregates Data (RBA)</h1>
+    
+    <br>
+    
+    <h2>Credit Aggregates Data (RBA)</h2>
     <form action="/creditAggregates">
         <button type="submit">See Credit Aggregates Data</button>
     </form>
-    <h1>Lending Indicators Data (ABS)</h1>
+
+    <br>
+
+    <h2>Lending Indicators Data (ABS)</h2>
     <form action="/lendingIndicators">
         <button type="submit">See Lending Indicators Data</button>
     </form>
-    <h1>Household Spending Indicator Data (ABS)</h1>
+
+    <br>
+
+    <h2>Household Spending Indicator Data (ABS)</h2>
     <form action="/householdSpendingIndicator">
         <button type="submit">See Household Spending Indicator Data</button>
     </form>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Feedback and suggestions: <a href= "mailto: dandrewrodgers@gmail.com"> dandrewrodgers@gmail.com </a></p>
 
     </body>
     </html>
